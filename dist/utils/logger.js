@@ -3,6 +3,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-unused-vars */
 const winston_1 = __importDefault(require("winston"));
 const enumerateErrorFormat = winston_1.default.format((info) => {
     if (info instanceof Error) {

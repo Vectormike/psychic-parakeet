@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
-import { shorten } from '../controller/url';
+import shorten from '../controller/url';
 
 const express = require('express');
 

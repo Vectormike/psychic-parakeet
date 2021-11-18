@@ -2,7 +2,7 @@
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
 import { Request, Response } from 'express';
-import { addOriginalUrl, getLongUrl } from '../services/url';
+import { addOriginalUrl } from '../services/url';
 
 interface IResponse {
   status: any;
@@ -22,4 +22,4 @@ const shorten = async (req: Request, res: IResponse): Promise<IResponse> => {
   });
 };
 
-export { shorten };
+export default shorten;

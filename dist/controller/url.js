@@ -9,7 +9,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.shorten = void 0;
 const url_1 = require("../services/url");
 const shorten = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const url = yield (0, url_1.addOriginalUrl)(req.body);
@@ -19,5 +18,5 @@ const shorten = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         data: url,
     });
 });
-exports.shorten = shorten;
+exports.default = shorten;
 //# sourceMappingURL=url.js.map
