@@ -1,0 +1,71 @@
+{
+  "name": "moveworkforward",
+  "description": "Simple API",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build-ts": "tsc",
+    "watch-node": "nodemon dist/server.js",
+    "watch-ts": "tsc -w",
+    "deploy": "git add . && git commit -m Heroku && git push heroku HEAD",
+    "test": "NODE_ENV=test jest --forceExit --coverage --verbose --colors",
+    "watch-test": "npm run test -- --watchAll"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/src/**/*.test.ts"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "transform": {
+      "^.+\\.[jt]sx?$": "ts-jest"
+    },
+    "setupFiles": [
+      "dotenv/config"
+    ],
+    "globals": {
+      "ts-jest": {
+        "isolatedModules": true
+      }
+    }
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "mongoose": "^5.10.9",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.8",
+    "@types/jest": "^26.0.15",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/mongoose": "^5.7.36",
+    "@types/node": "^14.11.10",
+    "@types/shortid": "^0.0.29",
+    "@types/supertest": "^2.0.10",
+    "@types/winston": "^2.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.3.1",
+    "@typescript-eslint/parser": "^5.3.1",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.6.1",
+    "jest-cli": "^26.6.1",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.2",
+    "tslint": "^5.20.1"
+  },
+  "author": "Wisdom Ekpot",
+  "license": "ISC"
+}
