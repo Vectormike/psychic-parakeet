@@ -1,6 +1,6 @@
 # Spleets
 
-Simple starter Node.js Application with Typescript
+Simple url shortener Application with Typescript
 
 # Pre-requisite
 
