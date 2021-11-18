@@ -23,8 +23,7 @@ Simple url shortener Application with Typescript
 
    `npm install`
 
-3. Create a `.env` file with the same variables as `.env.sample` in this repository. Replace the contents with your own `SESSION_SECRET` and `MLAB_URI`.
-
+3. Create a `.env` file with the same variables as `.env.example` in this repository.
    Please note that `MONGO_URL` is the connection url for MongoDB.
 
 4. Start your MongoDB server
