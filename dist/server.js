@@ -22,12 +22,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/* eslint-disable no-console */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
 /* eslint-disable no-unused-vars */
 const dotenv = __importStar(require("dotenv"));
 const mongoose_1 = __importDefault(require("mongoose"));
-const logger_1 = __importDefault(require("./utils/logger"));
 const app_1 = __importDefault(require("./app"));
 dotenv.config();
 /**
@@ -41,12 +41,12 @@ mongoose_1.default
     useUnifiedTopology: true,
 })
     .then(() => {
-    logger_1.default.info('Connected to MongoDB');
+    console.log('Connected to MongoDB');
     server = app_1.default.listen(app_1.default.get('port'), () => {
-        logger_1.default.info(`Listening to port ${app_1.default.get('port')}`);
+        console.log(`Listening to port ${app_1.default.get('port')}`);
     });
 })
     .catch((err) => {
-    logger_1.default.error(`MongoDB connection error ${err}`);
+    console.error(`MongoDB connection error ${err}`);
 });
 //# sourceMappingURL=server.js.map

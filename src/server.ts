@@ -1,9 +1,9 @@
+/* eslint-disable no-console */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
 /* eslint-disable no-unused-vars */
 import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import logger from './utils/logger';
 
 import app from './app';
 
@@ -20,11 +20,11 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() => {
-    logger.info('Connected to MongoDB');
+    console.log('Connected to MongoDB');
     server = app.listen(app.get('port'), () => {
-      logger.info(`Listening to port ${app.get('port')}`);
+      console.log(`Listening to port ${app.get('port')}`);
     });
   })
   .catch((err) => {
-    logger.error(`MongoDB connection error ${err}`);
+    console.error(`MongoDB connection error ${err}`);
   });

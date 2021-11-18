@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
 /* eslint-disable import/no-unresolved */
@@ -9,7 +10,6 @@ import http from 'http-status';
 import urlRoute from './routes/url';
 import Url from './models/url';
 import ApiError from './utils/ApiError';
-import logger from './utils/logger';
 
 dotenv.config();
 
@@ -33,7 +33,7 @@ app.get('/:code', async (req: Request, res: Response) => {
     }
     return res.redirect(url.originalUrl);
   } catch (error) {
-    logger.error(error);
+    console.log(error);
   }
 });
 app.use((_req, res): void => {

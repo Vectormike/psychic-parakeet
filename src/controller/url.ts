@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/extensions */
-import { Request, Response } from 'express';
+import { Request } from 'express';
 import { addOriginalUrl } from '../services/url';
 
 interface IResponse {

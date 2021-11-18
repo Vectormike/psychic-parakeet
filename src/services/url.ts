@@ -1,9 +1,9 @@
+/* eslint-disable no-console */
 /* eslint-disable consistent-return */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 import shortid from 'shortid';
 import http from 'http-status';
-import logger from '../utils/logger';
 import Url, { UrlDocument } from '../models/url';
 import validateUrl from '../utils/validateUrl';
 import ApiError from '../utils/ApiError';
@@ -50,7 +50,7 @@ const getLongUrl = async (payload: any): Promise<any> => {
     }
     return url;
   } catch (error) {
-    logger.error(error);
+    console.log(error);
   }
 };
 

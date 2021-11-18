@@ -13,12 +13,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getLongUrl = exports.addOriginalUrl = void 0;
+/* eslint-disable no-console */
 /* eslint-disable consistent-return */
 /* eslint-disable import/extensions */
 /* eslint-disable import/no-unresolved */
 const shortid_1 = __importDefault(require("shortid"));
 const http_status_1 = __importDefault(require("http-status"));
-const logger_1 = __importDefault(require("../utils/logger"));
 const url_1 = __importDefault(require("../models/url"));
 const validateUrl_1 = __importDefault(require("../utils/validateUrl"));
 const ApiError_1 = __importDefault(require("../utils/ApiError"));
@@ -57,7 +57,7 @@ const getLongUrl = (payload) => __awaiter(void 0, void 0, void 0, function* () {
         return url;
     }
     catch (error) {
-        logger_1.default.error(error);
+        console.log(error);
     }
 });
 exports.getLongUrl = getLongUrl;

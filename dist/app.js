@@ -31,6 +31,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
 /* eslint-disable consistent-return */
 /* eslint-disable import/no-unresolved */
@@ -42,7 +43,6 @@ const http_status_1 = __importDefault(require("http-status"));
 const url_1 = __importDefault(require("./routes/url"));
 const url_2 = __importDefault(require("./models/url"));
 const ApiError_1 = __importDefault(require("./utils/ApiError"));
-const logger_1 = __importDefault(require("./utils/logger"));
 dotenv.config();
 // Create Express server
 const app = (0, express_1.default)();
@@ -62,7 +62,7 @@ app.get('/:code', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         return res.redirect(url.originalUrl);
     }
     catch (error) {
-        logger_1.default.error(error);
+        console.log(error);
     }
 }));
 app.use((_req, res) => {
