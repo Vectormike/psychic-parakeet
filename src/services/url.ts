@@ -4,11 +4,16 @@
 /* eslint-disable import/no-unresolved */
 import shortid from 'shortid';
 import http from 'http-status';
+import * as dotenv from 'dotenv';
 import Url, { UrlDocument } from '../models/url';
 import validateUrl from '../utils/validateUrl';
 import ApiError from '../utils/ApiError';
 
+dotenv.config();
+
 const spleets = process.env.BASEURL;
+
+console.log(process.env);
 
 const addOriginalUrl = async (payload: UrlDocument): Promise<UrlDocument> => {
   // get original url from user
